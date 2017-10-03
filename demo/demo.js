@@ -18,6 +18,16 @@ const map3 = L.map('example3').setView([51.505, -0.09], 13).addLayer(mapboxTiles
 const map4 = L.map('example4').setView([51.505, -0.09], 13).addLayer(mapboxTiles3);
 // map2.dragging.disable();
 
+var arrow = L.polyline([[57, -19], [60, -12]], {}).addTo(map2);
+var arrowHead = L.polylineDecorator(arrow, {
+    patterns: [
+        {offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true}})}
+    ]
+    
+}).addTo(map2);
+
+
+
 map2.on('pm:create', function(e) {
     // alert('pm:create event fired. See console for details');
     console.log(e);
@@ -41,6 +51,7 @@ map2.on('pm:remove', function(e) {
 map2.on('pm:drawstart', function(e) {
     console.log(e);
 });
+
 
 const m1 = L.circleMarker([51.50313, -0.091223], { radius: 10 });
 const m2 = L.marker([51.50614, -0.0989]);
