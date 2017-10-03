@@ -27,6 +27,11 @@
     background-image: url('../assets/icons/line.png');
     background-size: 80%;
 }
+.leaflet-pm-toolbar .leaflet-pm-icon-alt-line {
+    background-image: url('../assets/icons/altline.png');
+    background-color: 'green';
+    background-size: 80%;
+}
 .leaflet-pm-toolbar .leaflet-pm-icon-circle {
     background-image: url('../assets/icons/circle.png');
     background-size: 90%;

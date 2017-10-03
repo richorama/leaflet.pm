@@ -54,8 +54,25 @@ map2.pm.addControls({
     drawPolygon: true,
     editPolygon: false,
     drawPolyline: false,
-    deleteLayer: true,
+    deleteLayer: true
 });
+
+
+map2.pm.enableDraw('AltLine', { 
+    
+        // the lines between coordinates/markers
+        templineStyle: {
+            color: 'blue',
+        },
+    
+        // the line from the last marker to the mouse cursor
+        hintlineStyle: {
+            color: 'blue',
+            dashArray: [5, 5],
+        }
+    });
+map2.pm.Draw.AltLine.disable();
+
 // map2.pm.addControls({
 //     drawMarker: false,
 //     drawPolygon: true,
@@ -78,12 +95,13 @@ map2.pm.addControls({
     deleteLayer: true,
 });
 
+/*
 map2.pm.disableDraw('Poly');
 map2.pm.enableDraw('Circle', {
     snappable: true,
     cursorMarker: true,
 });
-
+*/
 // GEOSJON EXAMPLE
 
 const geoJsonData = {

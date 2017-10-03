@@ -16,6 +16,7 @@ const Toolbar = L.Class.extend({
         cutPolygon: true,
         dragPolygon: false,
         removalMode: true,
+        drawAltLine: true,
         position: 'topleft',
     },
     initialize(map) {
@@ -241,6 +242,21 @@ const Toolbar = L.Class.extend({
             position: this.options.position,
         };
 
+        const drawAltLine = {
+            className: 'leaflet-pm-icon-alt-line',
+            onClick: () => {
+
+            },
+            afterClick: () => {
+                // toggle drawing mode
+                this.map.pm.Draw.AltLine.toggle();
+            },
+            doToggle: true,
+            toggleStatus: false,
+            disableOtherButtons: true,
+            position: this.options.position,
+        };
+
         this._addButton('drawMarker', new L.Control.PMButton(drawMarkerButton));
         this._addButton('drawPolyline', new L.Control.PMButton(drawLineButton));
         this._addButton('drawRectangle', new L.Control.PMButton(drawRectangleButton));
@@ -250,6 +266,7 @@ const Toolbar = L.Class.extend({
         this._addButton('editMode', new L.Control.PMButton(editButton));
         this._addButton('dragPolygon', new L.Control.PMButton(dragButton));
         this._addButton('removalMode', new L.Control.PMButton(deleteButton));
+        this._addButton('drawAltLine', new L.Control.PMButton(drawAltLine));
     },
 
     _showHideButtons() {

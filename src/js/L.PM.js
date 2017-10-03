@@ -19,6 +19,7 @@ import './Draw/L.PM.Draw.Poly';
 import './Draw/L.PM.Draw.Rectangle';
 import './Draw/L.PM.Draw.Circle';
 import './Draw/L.PM.Draw.Cut';
+import './Draw/L.PM.Draw.AltLine';
 
 
 import Edit from './Edit/L.PM.Edit';
