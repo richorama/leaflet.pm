@@ -275,7 +275,7 @@ const Toolbar = L.Class.extend({
         };
 
         const drawDoubleArrow = {
-            className: 'leaflet-pm-icon-arrow',
+            className: 'leaflet-pm-icon-double-arrow',
             onClick: () => {
 
             },
@@ -291,6 +291,9 @@ const Toolbar = L.Class.extend({
 
         this._addButton('drawMarker', new L.Control.PMButton(drawMarkerButton));
         this._addButton('drawPolyline', new L.Control.PMButton(drawLineButton));
+        this._addButton('drawAltLine', new L.Control.PMButton(drawAltLine));
+        this._addButton('drawArrow', new L.Control.PMButton(drawArrow));
+        this._addButton('drawDoubleArrow', new L.Control.PMButton(drawDoubleArrow));
         this._addButton('drawRectangle', new L.Control.PMButton(drawRectangleButton));
         this._addButton('drawPolygon', new L.Control.PMButton(drawPolyButton));
         this._addButton('drawCircle', new L.Control.PMButton(drawCircleButton));
@@ -298,9 +301,6 @@ const Toolbar = L.Class.extend({
         this._addButton('editMode', new L.Control.PMButton(editButton));
         this._addButton('dragPolygon', new L.Control.PMButton(dragButton));
         this._addButton('removalMode', new L.Control.PMButton(deleteButton));
-        this._addButton('drawAltLine', new L.Control.PMButton(drawAltLine));
-        this._addButton('drawArrow', new L.Control.PMButton(drawArrow));
-        this._addButton('drawDoubleArrow', new L.Control.PMButton(drawDoubleArrow));
     },
 
     _showHideButtons() {

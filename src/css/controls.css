@@ -35,6 +35,10 @@
     background-image: url('../assets/icons/arrow.png');
     background-size: 80%;
 }
+.leaflet-pm-toolbar .leaflet-pm-icon-double-arrow {
+    background-image: url('../assets/icons/doublearrow.png');
+    background-size: 80%;
+}
 .leaflet-pm-toolbar .leaflet-pm-icon-circle {
     background-image: url('../assets/icons/circle.png');
     background-size: 90%;
