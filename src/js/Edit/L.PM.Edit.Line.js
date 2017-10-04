@@ -402,6 +402,12 @@ Edit.Line = Edit.extend({
             const middleMarkerPrevLatLng = this._calcMiddleLatLng(markerLatLng, prevMarkerLatLng);
             marker._middleMarkerPrev.setLatLng(middleMarkerPrevLatLng);
         }
+
+        this._layer.fire('pm:drag', {
+            markerEvent: e,
+            ringIndex,
+            index
+        });
     },
 
     _onMarkerDragEnd(e) {

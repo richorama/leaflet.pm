@@ -10,7 +10,6 @@ Draw.DoubleArrow = Draw.Line.extend({
         // TODO: Think about if these options could be passed globally for all
         // instances of L.PM.Draw. So a dev could set drawing style one time as some kind of config
         L.Util.setOptions(this, options);
-        console.log("arrows")
         // enable draw mode
         this._enabled = true;
 

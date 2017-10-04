@@ -44,6 +44,7 @@ const SnapMixin = {
     _handleSnapLayerRemoval({ layer }) {
         // find the layers index in snaplist
         const index = this._snapList.findIndex(e => e._leaflet_id === layer._leaflet_id);
+        if (index === -1) return;
         // remove it from the snaplist
         this._snapList.splice(index, 1);
     },

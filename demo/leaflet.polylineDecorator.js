@@ -245,12 +245,14 @@ L.Symbol.ArrowHead = L.Class.extend({
         pathOptions: {
             stroke: false,
             weight: 2
+            
         }
     },
 
     initialize: function initialize(options) {
         L.Util.setOptions(this, options);
         this.options.pathOptions.clickable = false;
+        this.options.pathOptions.pmIgnore = true;
     },
 
     buildSymbol: function buildSymbol(dirPoint, latLngs, map, index, total) {
@@ -286,6 +288,7 @@ L.Symbol.Marker = L.Class.extend({
         L.Util.setOptions(this, options);
         this.options.markerOptions.clickable = false;
         this.options.markerOptions.draggable = false;
+        this.options.markerOptions.pmIgnore = true;
     },
 
     buildSymbol: function buildSymbol(directionPoint, latLngs, map, index, total) {
