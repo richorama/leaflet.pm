@@ -29,7 +29,7 @@ Draw.Circle = Draw.extend({
         // this is the marker in the center of the circle
         this._centerMarker = L.marker([0, 0], {
             icon: L.divIcon({ className: 'marker-icon' }),
-            draggable: true,
+            draggable: false,
             zIndexOffset: 100,
         });
         this._centerMarker._pmTempLayer = true;
@@ -62,7 +62,7 @@ Draw.Circle = Draw.extend({
         this._map.on('mousemove', this._syncHintMarker, this);
 
         // fire drawstart event
-        this._map.fire('pm:drawstart', { shape: this._shape });
+        this._map.fire('pm:drawstart', { shape: this._shape, workingLayer: this._layer });
 
         // toggle the draw button of the Toolbar in case drawing mode got enabled without the button
         this._map.pm.Toolbar.toggleButton(this.toolbarButtonName, true);
