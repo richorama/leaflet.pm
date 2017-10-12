@@ -60,6 +60,7 @@ map2.pm.addControls({
     drawPolygon: true,
     editPolygon: false,
     drawPolyline: false,
+    drawAltPolygon : true,
     deleteLayer: true
 });
 
@@ -232,7 +233,7 @@ const polygonLayer = L.polygon([
     [51.51, -0.047],
 ]).addTo(map3).addTo(map2);
 polygonLayer.pm.toggleEdit();
-*/
+
 polygonLayer.on('pm:snap', function(e) {
     console.log(e);
 });
@@ -240,7 +241,7 @@ polygonLayer.on('pm:snap', function(e) {
 polygonLayer.on('pm:edit', function(e) {
     console.log(e);
 });
-
+*/
 
 
 // Layer Group Example

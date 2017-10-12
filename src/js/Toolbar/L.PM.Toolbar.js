@@ -19,6 +19,7 @@ const Toolbar = L.Class.extend({
         drawAltLine: true,
         drawArrow : true,
         drawDoubleArrow : true,
+        drawAltPoly : true,
         position: 'topleft',
     },
     initialize(map) {
@@ -131,6 +132,22 @@ const Toolbar = L.Class.extend({
             afterClick: () => {
                 // toggle drawing mode
                 this.map.pm.Draw.Poly.toggle();
+            },
+            doToggle: true,
+            toggleStatus: false,
+            disableOtherButtons: true,
+            position: this.options.position,
+        };
+
+        
+        const drawAltPolyButton = {
+            className: 'leaflet-pm-icon-alt-polygon',
+            onClick: () => {
+
+            },
+            afterClick: () => {
+                // toggle drawing mode
+                this.map.pm.Draw.AltPoly.toggle();
             },
             doToggle: true,
             toggleStatus: false,
@@ -296,6 +313,7 @@ const Toolbar = L.Class.extend({
         this._addButton('drawDoubleArrow', new L.Control.PMButton(drawDoubleArrow));
         this._addButton('drawRectangle', new L.Control.PMButton(drawRectangleButton));
         this._addButton('drawPolygon', new L.Control.PMButton(drawPolyButton));
+        this._addButton('drawAltPolygon', new L.Control.PMButton(drawAltPolyButton));
         this._addButton('drawCircle', new L.Control.PMButton(drawCircleButton));
         this._addButton('cutPolygon', new L.Control.PMButton(cutButton));
         this._addButton('editMode', new L.Control.PMButton(editButton));

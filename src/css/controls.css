@@ -23,6 +23,9 @@
 .leaflet-pm-toolbar .leaflet-pm-icon-polygon {
     background-image: url('../assets/icons/draw.png');
 }
+.leaflet-pm-toolbar .leaflet-pm-icon-alt-polygon {
+    background-image: url('../assets/icons/alt-polygon.png');
+}
 .leaflet-pm-toolbar .leaflet-pm-icon-polyline {
     background-image: url('../assets/icons/line.png');
     background-size: 80%;
