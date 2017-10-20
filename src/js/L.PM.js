@@ -21,6 +21,7 @@ import './Draw/L.PM.Draw.Rectangle';
 import './Draw/L.PM.Draw.Circle';
 import './Draw/L.PM.Draw.Cut';
 import './Draw/L.PM.Draw.AltLine';
+import './Draw/L.PM.Draw.Route';
 import './Draw/L.PM.Draw.Arrow';
 import './Draw/L.PM.Draw.DoubleArrow';
 

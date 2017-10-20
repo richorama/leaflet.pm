@@ -50,6 +50,10 @@
     background-image: url('../assets/icons/rectangle.png');
     background-size: 90%;
 }
+.leaflet-pm-toolbar .leaflet-pm-icon-route {
+    background-image: url('../assets/icons/route.png');
+    background-size: 90%;
+}
 .leaflet-pm-toolbar .leaflet-pm-icon-drag {
     /*background-image: url('../assets/icons/drag.png');*/
 }
